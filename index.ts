@@ -6,7 +6,7 @@ type Tab = {
   hostname: string;
 };
 
-type Window = {
+export type Window = {
   title: string;
   tabs: Tab[];
 };
@@ -63,6 +63,14 @@ const combinedWindow = combineAndSortWindows(windows);
 const windowAfterRemoveTabs = removeTabs(combinedWindow, [
   "Yomaru",
   "www.google.com/search",
+  "mobbin",
+  "obsidian.md",
+  "spotify.com",
+  "cleanshot",
+  "stackoverflow",
+  "craft.do",
+  "edge://",
+  "cal.com",
 ]);
 writeJsonFile("output.json", windowAfterRemoveTabs);
 
